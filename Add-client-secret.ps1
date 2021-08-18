@@ -1,10 +1,7 @@
 Write-Output "感谢使用AZURE应用Client secret过期时间定制脚本"
-$Get_AzTenant_Id = Read-Host "请输入你需要注册的应用的账户的租户id（Tenant id）"
-if ([string]::IsNullOrWhiteSpace($Get_AzTenant_Id))
-{
+
 $Get_AzTenant_Id = Get-AzTenant
-}
-Write-Output "应用租户id"
+Write-Output "正在应用当前Azure用户的租户id"
 Connect-AzureAD -TenantId $Get_AzTenant_Id -confirm
 
 $startDate = Get-Date
