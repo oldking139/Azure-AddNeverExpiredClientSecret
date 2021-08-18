@@ -4,6 +4,8 @@ if ([string]::IsNullOrWhiteSpace($Get_AzTenant_Id))
 {
 $Get_AzTenant_Id = Get-AzTenant
 }
+Write-Output "应用租户id"
+Connect-AzureAD -TenantId $Get_AzTenant_Id -confirm
 
 $startDate = Get-Date
 $AddYears = Read-Host "请输入您注册client secret所需要的过期时间(默认过期时间为300年)"
