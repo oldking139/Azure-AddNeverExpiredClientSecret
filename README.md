@@ -11,7 +11,7 @@ wget https://raw.githubusercontent.com/oldking139/Azure-AddNeverExpiredClientSec
 ```
 ./Add-client-secret.ps1
 ```
-请注意：生成的client id仅显示一次，请务必在生成后立即保存在安全的地方。
+请注意：生成的client id仅显示一次，请务必在生成后立即保存到安全的地方。
 
 ### 关于脚本：
 1) 租户id（tenant id）：即每一个用户唯一id，若应用注册在当前用户下，则可以留空；若应用注册在其他用户下，则填写其他用户的租户id。
