@@ -2,7 +2,7 @@ Write-Output "感谢使用AZURE应用Client secret过期时间定制脚本"
 $Get_AzTenant_Id = Read-Host "请输入你需要注册的应用的账户的租户id（Tenant id）"
 if ([string]::IsNullOrWhiteSpace($Get_AzTenant_Id))
 {
-$Get_AzTenant_Id == Get-AzTenant
+$Get_AzTenant_Id = Get-AzTenant
 }
 
 $startDate = Get-Date
