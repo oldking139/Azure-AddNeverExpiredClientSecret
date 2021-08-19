@@ -1,7 +1,6 @@
 Write-Output "感谢使用AZURE应用Client secret过期时间定制脚本"
 
 $Get_AzTenant_Id = Get-AzTenant
-Write-Output "获取应用租户id"
 Connect-AzureAD -TenantId $Get_AzTenant_Id -confirm
 
 $startDate = Get-Date
