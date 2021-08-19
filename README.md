@@ -3,12 +3,14 @@
 
 ### 使用方法(手动版)：
 1) 在 Azure 门户中开启Azure powershell
+
 2.1) 运行以下代码以确认租户id：
 ```
 Connect-AzureAD -TenantId **** -confirm
 ```
 请将****替换为用户的租户id。
-2) 拉取脚本：
+
+2.2) 拉取脚本：
 ```
 wget https://raw.githubusercontent.com/oldking139/Azure-AddNeverExpiredClientSecret/master/Add-client-secret-no-tenant-check.ps1
 ```
