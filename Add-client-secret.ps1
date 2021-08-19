@@ -1,11 +1,14 @@
 Write-Output "感谢使用AZURE应用Client secret过期时间定制脚本"
 
-$Get_AzTenant_Id = Get-AzTenant
-Write-Output "获取应用租户id"
+$Get_AzTenant_Id = Read-Host "请输入注册应用所属的账户的租户id（留空为当前应用）"
+if ([string]::IsNullOrWhiteSpace($Get_AzTenant_Id))
+{$Get_AzTenant_Id = Get-AzTenant}
+
+Write-Output "检测应用租户id"
 Connect-AzureAD -TenantId $Get_AzTenant_Id -confirm
 
 $startDate = Get-Date
-$AddYears = Read-Host "请输入您注册client secret所需要的过期时间(默认过期时间为300年)"
+$AddYears = Read-Host "请输入您注册client secret所需要的过期时间(留空：过期时间为300年)"
 if ([string]::IsNullOrWhiteSpace($AddYears))
 {$AddYears = ‘300’}
 
