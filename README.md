@@ -3,11 +3,12 @@
 
 ### 使用方法：
 1) 在 Azure 门户中开启Azure powershell
-2) 拉取脚本：
+2) 拉取dev脚本：
 ```
-wget https://raw.githubusercontent.com/oldking139/Azure-AddNeverExpiredClientSecret/master/Add-client-secret.ps1
+wget https://raw.githubusercontent.com/oldking139/Azure-AddNeverExpiredClientSecret/dev/Add-client-secret.ps1
+
 ```
-3) 运行脚本：
+3) 运行dev脚本：
 ```
 ./Add-client-secret.ps1
 ```
