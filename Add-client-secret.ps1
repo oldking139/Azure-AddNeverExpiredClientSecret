@@ -4,7 +4,7 @@ $Get_AzTenant_Id = Read-Host "请输入注册应用所属的账户的租户id（
 if ([string]::IsNullOrWhiteSpace($Get_AzTenant_Id))
 {$Get_AzTenant_Id = Get-AzTenant}
 
-Write-Output "当前使用的应用租户id:" $Get_AzTenant_Id
+Write-Output "应用租户id"
 Connect-AzureAD -TenantId "$Get_AzTenant_Id" -confirm
 
 $startDate = Get-Date
