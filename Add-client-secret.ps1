@@ -12,4 +12,5 @@ if ([string]::IsNullOrWhiteSpace($AddYears))
 $endDate = $startDate.AddYears($AddYears)
 $ObjectId = Read-Host "请输入您所需要注册client secret的应用（Application）的ObjectId"
 $aadAppsecret01 = New-AzureADApplicationPasswordCredential -ObjectId $ObjectId -StartDate $startDate -EndDate $endDate
+Write-Output "以下内容仅显示一次，请妥善保存"
 Write-Output $aadAppsecret01
